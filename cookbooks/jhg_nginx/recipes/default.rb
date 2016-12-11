@@ -1,10 +1,10 @@
-directory node['ohai']['plugin_path'] do
-  owner     'root'
-  group     'root'
-  mode      '0755'
-  recursive true
+include_recipe 'nginx'
+include_recipe 'nginx::repo'
+# https://github.com/miketheman/nginx/blob/3.0.0-rewrite/recipes/example.rb
+# nginx_service 'example'
+package 'nginx' do
+  action :install
 end
-
 directory node['nginx']['dir'] do
   owner     'root'
   group     'root'
@@ -32,4 +32,3 @@ directory "#{node['nginx']['dir']}/conf.d" do
   mode  '0755'
 end
 
-include_recipe 'nginx'
