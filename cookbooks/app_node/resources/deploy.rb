@@ -40,7 +40,8 @@ action :create do
     mode '0744'
     action :create
   end
-
+  puts "&%&%&"
+  puts tar_flags
   tar_extract artifact_path do
     target_dir target_dir
     creates "#{target_dir}/#{entry_point}"
