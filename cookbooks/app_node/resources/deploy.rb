@@ -9,7 +9,7 @@ property :app_port, Fixnum, default: 3000
 property :s3_region, String, default: "#{node['base']['aws']['region']}"
 property :s3_bucket, String, default: "#{node['base']['releases_bucket']}"
 property :entry_point, String, default: "index.js"
-property :tar_strip_components, Fixnum, default: 0
+property :tar_flags, Array, default: []
 # property :proxy_user, String, default: "www-data"
 
 # TODO: figure out if we want to do this. would make it harder to deploy a
@@ -44,7 +44,7 @@ action :create do
   tar_extract artifact_path do
     target_dir target_dir
     creates "#{target_dir}/#{entry_point}"
-    tar_flags [ '--strip-components #{tar_strip_components}' ]
+    tar_flags tar_flags
     user app_user
     group app_user
     mode '0744'
