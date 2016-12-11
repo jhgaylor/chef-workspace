@@ -59,6 +59,7 @@ action :create do
     owner 'root'
     group 'root'
     mode '0644'
+    cookbook 'app_node'
     variables({
       :server_name => "#{dns_name}"  
     })
@@ -78,6 +79,7 @@ action :create do
     owner 'root'
     group 'root'
     mode '0744'
+    cookbook 'app_node'
     variables({
       :app_name => node,
       :app_dir => target_dir
