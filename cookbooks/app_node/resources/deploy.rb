@@ -61,7 +61,8 @@ action :create do
     mode '0644'
     cookbook 'app_node'
     variables({
-      :server_name => "#{dns_name}"  
+      :server_name => "#{dns_name}",
+      :app_port => "#{app_port}"  
     })
   end
 
