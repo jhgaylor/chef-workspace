@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name pct.opslab.xyz;
+    server_name <%= @server_name %>;
     location / {
         root <%= @ui_dir %>/static;
     }
