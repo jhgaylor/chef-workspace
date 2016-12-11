@@ -1,5 +1,12 @@
 include_recipe 'nginx'
 
+directory node['ohai']['plugin_path'] do
+  owner     'root'
+  group     'root'
+  mode      '0755'
+  recursive true
+end
+
 directory node['nginx']['dir'] do
   owner     'root'
   group     'root'

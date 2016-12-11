@@ -7,5 +7,3 @@ long_description 'Installs/Configures nginx the way I like it.'
 version '0.1.0'
 
 depends 'nginx'
-depends 'tar'
-depends 'nodejs'
