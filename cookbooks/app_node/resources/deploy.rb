@@ -5,11 +5,11 @@ property :name, String, name_property: true
 property :version, String, required: true
 property :dns_name, String, default: "localhost"
 property :app_user, String, default: "ubuntu"
-property :app_port, Number, default: 3000
+property :app_port, Fixnum, default: 3000
 property :s3_region, String, default: "#{node['base']['aws']['region']}"
 property :s3_bucket, String, default: "#{node['base']['releases_bucket']}"
 property :entry_point, String, default: "index.js"
-property :tar_strip_components, Number, default: 0
+property :tar_strip_components, Fixnum, default: 0
 # property :proxy_user, String, default: "www-data"
 
 # TODO: figure out if we want to do this. would make it harder to deploy a
