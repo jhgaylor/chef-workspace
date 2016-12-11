@@ -29,7 +29,7 @@ action :create do
   awscli_s3_file artifact_path do
     region s3_region
     bucket s3_bucket
-    key "#{name}/#{artifact_package_name}"
+    key "#{name}/#{name}-#{version}.tar.gz"
     timeout 1200
     owner app_user
     group app_user
