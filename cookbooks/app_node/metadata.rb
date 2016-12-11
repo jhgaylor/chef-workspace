@@ -6,6 +6,6 @@ description 'Installs/Configures an app that uses nodejs behind an nginx proxy.'
 long_description 'Installs/Configures an app that uses nodejs behind an nginx proxy.'
 version '0.1.0'
 
-cookbook 'jhg_nginx', '~> 0.2.0'
+depends 'jhg_nginx'
 depends 'tar'
 depends 'nodejs'
