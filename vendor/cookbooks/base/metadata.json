@@ -1,0 +1,43 @@
+{
+  "name": "base",
+  "description": "Installs/Configures base",
+  "long_description": "Installs/Configures base",
+  "maintainer": "Jake Gaylor",
+  "maintainer_email": "jhgaylor@gmail.com",
+  "license": "all_rights",
+  "platforms": {
+  },
+  "dependencies": {
+    "apt": ">= 0.0.0",
+    "awscli": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.0",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false,
+  "chef_versions": [
+
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}
