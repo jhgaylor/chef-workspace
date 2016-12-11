@@ -6,4 +6,4 @@ description 'Installs/Configures nginx the way I like it.'
 long_description 'Installs/Configures nginx the way I like it.'
 version '0.1.0'
 
-depends 'nginx'
+depends 'nginx', '= 2.2.0'
