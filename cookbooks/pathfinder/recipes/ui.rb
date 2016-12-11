@@ -1,3 +1,3 @@
-app_static '' do |r|
+# app_static '' do |r|
   
-end
+# end
