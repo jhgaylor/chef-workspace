@@ -6,6 +6,7 @@ description 'Installs/Configures a static site behind an nginx server.'
 long_description 'Installs/Configures a static site behind an nginx server.'
 version '0.1.0'
 
+depends 'base'
 depends 'nginx'
 depends 'tar'
 depends 'nodejs'
