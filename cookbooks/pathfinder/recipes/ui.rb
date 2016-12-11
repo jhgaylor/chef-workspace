@@ -1,3 +1,5 @@
-# app_static '' do |r|
-  
-# end
+deploy_static node['pathfinder']['ui']['name'] do |r|
+  app_version node['pathfinder']['ui']['version']
+  dns_name node['pathfinder']['ui']['dns_name']
+  tar_flags ['--strip-components 3']
+end
