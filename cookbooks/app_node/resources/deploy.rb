@@ -19,18 +19,15 @@ property :tar_strip_components, Fixnum, default: 0
 # end
 
 action :create do
-  puts app_name
+
   artifact_package_name = "#{app_name}-#{app_version}.tar.gz"
-  puts app_name
   artifact_path = "/tmp/#{artifact_package_name}"
-  puts app_name
   target_dir = "/opt/#{app_name}"
-  puts app_name
 
   awscli_s3_file artifact_path do
     region s3_region
     bucket s3_bucket
-    key "#{app_name}/#{app_name}-#{app_version}.tar.gz"
+    key "#{app_name}/#{artifact_package_name}"
     timeout 1200
     owner app_user
     group app_user
