@@ -6,6 +6,5 @@ description 'Installs/Configures pathfinder'
 long_description 'Installs/Configures pathfinder'
 version '0.1.0'
 
-depends 'nginx'
-depends 'tar'
-depends 'nodejs'
+depends 'app_node'
+depends 'app_static'
