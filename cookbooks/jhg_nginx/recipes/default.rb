@@ -1,5 +1,3 @@
-include_recipe 'nginx'
-
 directory node['ohai']['plugin_path'] do
   owner     'root'
   group     'root'
@@ -33,3 +31,5 @@ directory "#{node['nginx']['dir']}/conf.d" do
   group node['root_group']
   mode  '0755'
 end
+
+include_recipe 'nginx'
