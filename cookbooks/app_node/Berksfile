@@ -1,0 +1,7 @@
+source "https://api.berkshelf.com"
+
+cookbook 'jhg_nginx', '~> 0.2.0'
+cookbook 'nodejs', '~> 3.0.0'
+cookbook 'tar', '~> 0.7.0'
+
+metadata
