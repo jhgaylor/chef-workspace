@@ -4,7 +4,7 @@ template "#{node['nginx']['dir']}/sites-available/ui" do
   group 'root'
   mode '0644'
   variables({
-    :ui_dir => "/opt/#{node['pathfinder']}['ui']['name']}"  
+    :ui_dir => "/opt/#{node['pathfinder']['ui']['name']}"  
   })
 end
 
