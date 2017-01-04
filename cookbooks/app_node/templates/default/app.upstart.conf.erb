@@ -14,6 +14,6 @@ exec start-stop-daemon \
   --chdir <%= @app_dir %> \
   --make-pidfile \
   --pidfile <%= @app_dir %>/node-upstart.pid \
-  --exec /usr/bin/node \
+  --exec /usr/local/bin/node \
   -- \
   <%= @app_dir %>/index.js >> /var/log/<%= @app_name %>.log 2>&1
