@@ -11,6 +11,7 @@ respawn
 exec start-stop-daemon \
   --start \
   --chuid ubuntu \
+  --chdir <%= @app_dir %> \
   --make-pidfile \
   --pidfile <%= @app_dir %>/node-upstart.pid \
   --exec /usr/bin/node \
